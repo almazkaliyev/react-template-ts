@@ -2,6 +2,6 @@
   to: "<%= `${src}/index.tsx` %>"
 ---
 
-export const <%= name %> = () => {
+export const <%= name %>: React.FC = () => {
   return <div />;
 };

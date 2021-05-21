@@ -8,7 +8,7 @@ import { <%= name %> } from '@/components/modals/components/<%= name %>';
 import { RootState } from '@/utils/sharedTypes';
 import { close<%= name %> } from '@/store/modals/actions';
 
-export const <%= name %>Container = () => {
+export const <%= name %>Container: React.FC = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state: RootState) => state.modals..isOpen);
 

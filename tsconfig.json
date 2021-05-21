@@ -1,32 +1,32 @@
 {
-  "compilerOptions":{
-    "strict":true,
-    "module":"es6",
-    "target":"es6",
-    "jsx":"react-jsx",
-    "moduleResolution":"node",
-    "allowJs":true,
-    "removeComments":true,
-    "alwaysStrict":true,
-    "allowUnreachableCode":false,
-    "noImplicitAny":true,
-    "noImplicitThis":true,
-    "noUnusedLocals":true,
-    "noUnusedParameters":true,
-    "noImplicitReturns":true,
-    "esModuleInterop": true,
-    "noFallthroughCasesInSwitch":true,
-    "forceConsistentCasingInFileNames":true,
-    "baseUrl":".",
-    "paths":{
-      "@/*":["src/*"],
-      "features/*":["src/components/features/*"],
-      "shared/*":["src/components/shared/*"],
-      "forms/*":["src/components/forms/*"],
-      "templates/*":["src/components/templates/*"],
-      "pages/*":["src/components/pages/*"],
-      "hoc/*":["src/components/hoc/*"]
+  "compilerOptions": {
+    "strict": true,
+    "module": "es6",
+    "target": "es6",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "removeComments": true,
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "esModuleInterop":  true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "features/*": ["src/components/features/*"],
+      "shared/*": ["src/components/shared/*"],
+      "forms/*": ["src/components/forms/*"],
+      "templates/*": ["src/components/templates/*"],
+      "pages/*": ["src/components/pages/*"],
+      "hoc/*": ["src/components/hoc/*"]
     }
   },
-  "include":["src/**/*"]
+  "include": ["src/**/*"]
 }

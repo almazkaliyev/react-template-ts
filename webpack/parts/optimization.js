@@ -1,4 +1,4 @@
-const getCssNanoPlugin = require('../plugins/css-nano-plugin');
+const getCssMinimizerPlugin = require('../plugins/css-minimizer-plugin');
 const getTerserPlugin = require('../plugins/terser-webpack-plugin');
 /**
  * @description Returns optimization webpack object
@@ -10,16 +10,15 @@ const getTerserPlugin = require('../plugins/terser-webpack-plugin');
  */
 function getOptimization() {
   return {
-    minimizer: [getTerserPlugin(), getCssNanoPlugin()],
+    minimizer: [getTerserPlugin(), getCssMinimizerPlugin()],
     moduleIds: 'deterministic',
     splitChunks: {
+      automaticNameDelimiter: '~',
       chunks: 'async',
-      minSize: 30000,
-      maxSize: 0,
-      minChunks: 1,
       maxAsyncRequests: 6,
       maxInitialRequests: 4,
-      automaticNameDelimiter: '~',
+      minChunks: 1,
+      minSize: 30000,
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
