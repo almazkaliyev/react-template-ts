@@ -10,3 +10,5 @@ const container = document.getElementById('app');
 const AppWithSetup = setup(App);
 
 render(<AppWithSetup />, container);
+
+module?.hot?.accept();

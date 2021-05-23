@@ -13,6 +13,7 @@ function getEntryOutput() {
     output: {
       filename: isProd ? '[name].js' : '[name].[contenthash].js',
       path: path.resolve(__dirname, '../../build'),
+      publicPath: '/',
     },
   };
 }

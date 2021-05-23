@@ -1,5 +1,5 @@
-import { BrowserRouter } from 'react-router-dom';
 import { Provider as ReduxProvider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { store } from '@/store/store';
 
@@ -10,11 +10,11 @@ import { store } from '@/store/store';
 export const withProviders = (App: React.FC) => {
   return function ProvidersConnector({ ...props }) {
     return (
-      <BrowserRouter>
+      <Router>
         <ReduxProvider store={store}>
           <App {...props} />
         </ReduxProvider>
-      </BrowserRouter>
+      </Router>
     );
   };
 };
