@@ -2,6 +2,7 @@
   "extends": [
     "airbnb-typescript",
     "airbnb/hooks",
+    "plugin:sonarjs/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
@@ -19,7 +20,10 @@
     "browser": true,
     "es6": true
   },
-  "plugins": ["eslint-plugin-import-helpers"],
+  "plugins": [
+    "eslint-plugin-import-helpers",
+    "sonarjs"
+  ],
   "settings": {
     "react": {
       "version": "detect"
