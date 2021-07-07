@@ -8,7 +8,7 @@ const getSVGRLoader = require('../loaders/svgr-loader');
 function getSVGPreset() {
   return {
     test: /\.svg$/i,
-    use: [getSVGRLoader()],
+    use: [getSVGRLoader(), 'file-loader'],
   };
 }
 

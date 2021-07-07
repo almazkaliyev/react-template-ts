@@ -10,13 +10,11 @@ function getResolve() {
   return {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
-      features: path.resolve(__dirname, '../../src/components/features'),
-      hoc: path.resolve(__dirname, '../../src/components/hoc'),
-      pages: path.resolve(__dirname, '../../src/components/pages'),
-      shared: path.resolve(__dirname, '../../src/components/shared'),
-      forms: path.resolve(__dirname, '../../src/components/forms'),
-      templates: path.resolve(__dirname, '../../src/components/templates'),
-      '@': path.resolve(__dirname, '../../src/'),
+      assets: path.resolve(__dirname, '../../src/assets'),
+      components: path.resolve(__dirname, '../../src/components'),
+      pages: path.resolve(__dirname, '../../src/pages'),
+      store: path.resolve(__dirname, '../../src/store'),
+      utils: path.resolve(__dirname, '../../src/utils'),
     },
   };
 }

@@ -10,7 +10,7 @@ function getBabelLoader() {
     loader: 'babel-loader',
     options: {
       babelrc: true,
-      extends: path.resolve(__dirname, '../../.babelrc.js'),
+      extends: path.resolve(__dirname, '../../.babelrc.json'),
     },
   };
 }

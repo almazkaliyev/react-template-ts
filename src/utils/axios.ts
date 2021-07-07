@@ -1,12 +1,22 @@
 import axios from 'axios';
 
-import LS from '@/utils/LS';
+import { store } from '../store';
 
-export const setAxiosAuthHeader = (token: string | null) => {
-  if (token) axios.defaults.headers['Authorization'] = `Bearer ${token}`;
+export const setAxiosAuthHeader = (token: string | null): void => {
+  if (token) axios.defaults.headers.Authorization = `Bearer ${token}`;
 };
 
 axios.defaults.baseURL = process.env.API_URL;
 
-const token = LS.getAuthToken();
-setAxiosAuthHeader(token);
+axios.interceptors.request.use(
+  (config) => {
+    const state = store.getState();
+    const token = state.user.accessToken;
+
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+);

@@ -1,21 +1,35 @@
-const ImageminPlugin = require('imagemin-webpack');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const { extendDefaultPlugins } = require("svgo");
 
 /**
  * @description Returns a plugin, which process images
  * @memberOf module:Plugins
- * @return {ImageminPlugin}
- * @see https://www.npmjs.com/package/imagemin-webpack
+ * @return {ImageMinimizerPlugin}
+ * @see https://webpack.js.org/plugins/image-minimizer-webpack-plugin/
  */
 function getImagminPlugin() {
-  return new ImageminPlugin({
-    bail: false, // Ignore errors on corrupted images
-    cache: true,
-    maxConcurrency: 4,
-    imageminOptions: {
+  return new ImageMinimizerPlugin({
+    minimizerOptions: {
       plugins: [
-        ['mozjpeg', { progressive: true, quality: 85 }],
-        ['pngquant', { speed: 4, quality: [0.65, 0.85] }],
-        ['svgo', { quality: 85 }],
+        ['jpegtran', { progressive: true }],
+        ['optipng', { optimizationLevel: 5 }],
+        [
+          'svgo',
+          {
+            plugins: extendDefaultPlugins([
+              {
+                name: "removeViewBox",
+                active: true,
+              },
+              {
+                name: "addAttributesToSVGElement",
+                params: {
+                  attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
+                },
+              },
+            ]),
+          },
+        ],
       ],
     },
   });

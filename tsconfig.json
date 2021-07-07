@@ -1,32 +1,39 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "module": "es6",
-    "target": "es6",
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
     "allowJs": true,
-    "removeComments": true,
-    "alwaysStrict": true,
-    "allowUnreachableCode": false,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "esModuleInterop":  true,
-    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es5",
     "paths": {
-      "@/*": ["src/*"],
-      "features/*": ["src/components/features/*"],
-      "shared/*": ["src/components/shared/*"],
-      "forms/*": ["src/components/forms/*"],
-      "templates/*": ["src/components/templates/*"],
-      "pages/*": ["src/components/pages/*"],
-      "hoc/*": ["src/components/hoc/*"]
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "pages/*": ["./src/pages/*"],
+      "store/*": ["./src/store/*"],
+      "utils/*": ["./src/utils/*"],
     }
   },
-  "include": ["src/**/*"]
+  "exclude": [
+    "webpack/**/*"
+  ],
+  "include": [
+    "src/**/*"
+  ]
 }

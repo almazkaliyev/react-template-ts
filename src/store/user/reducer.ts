@@ -1,13 +1,13 @@
 import { createReducer } from '@reduxjs/toolkit';
 
-import { login } from '@/store/user/actions';
+interface UserState {
+  accessToken: null | string;
+}
 
-const initialState = {
-  isLoggedIn: false,
+const initialState: UserState = {
+  accessToken: null,
 };
 
 export const userReducer = createReducer(initialState, (builder) => {
-  builder.addCase(login, (state) => {
-    state.isLoggedIn = true;
-  });
+
 });

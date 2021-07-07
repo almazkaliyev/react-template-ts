@@ -1,14 +1,22 @@
 import 'regenerator-runtime/runtime';
 
+import { StrictMode } from 'react';
 import { render } from 'react-dom';
+import { Provider as ReduxProvider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import '@/utils/axios';
 import { App } from './App';
-import { setup } from 'hoc/setup';
+import { store } from './store';
 
-const container = document.getElementById('app');
-const AppWithSetup = setup(App);
-
-render(<AppWithSetup />, container);
+render(
+  <StrictMode>
+    <Router>
+      <ReduxProvider store={store}>
+        <App />
+      </ReduxProvider>
+    </Router>
+  </StrictMode>,
+  document.getElementById('app'),
+);
 
 module?.hot?.accept();

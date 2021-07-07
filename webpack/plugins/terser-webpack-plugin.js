@@ -1,4 +1,4 @@
-const TerserWebpackPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 /**
  * @description Returns terser plugin which minimize js properly
@@ -7,7 +7,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
  * @see https://webpack.js.org/plugins/terser-webpack-plugin/
  */
 function getTerserPlugin() {
-  return new TerserWebpackPlugin({
+  return new TerserPlugin({
     parallel: true,
   });
 }
