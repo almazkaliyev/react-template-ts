@@ -5,7 +5,7 @@
  * @see https://www.npmjs.com/package/css-loader
  */
 function getCssLoader() {
-  return ['css-loader', 'sass-loader'];
+  return ['css-loader', 'less-loader'];
 }
 
 module.exports = getCssLoader;

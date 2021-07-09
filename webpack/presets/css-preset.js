@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const getCssLoader = require('../loaders/css-loader');
 
 /**
- * Returns a flow for process scss, css input
+ * Returns a flow for process less, css input
  * @memberOf module:Presets
  * @return {Preset}
  */
@@ -13,7 +13,7 @@ function getCssPreset() {
   loaders.push(...getCssLoader());
 
   return {
-    test: /\.(scss|css)$/,
+    test: /\.(less|css)$/,
     use: loaders,
   };
 }

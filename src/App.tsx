@@ -1,4 +1,4 @@
-import 'assets/scss/app.scss';
+import 'assets/less/app.less';
 
 import { Route, Switch } from 'react-router-dom';
 
