@@ -1,6 +1,6 @@
 import 'regenerator-runtime/runtime';
 
-import 'assets/less/app.less';
+import 'assets/scss/app.scss';
 
 import { render } from 'react-dom';
 
