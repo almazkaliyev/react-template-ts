@@ -15,6 +15,8 @@ function getResolve() {
       pages: path.resolve(__dirname, '../../src/pages'),
       store: path.resolve(__dirname, '../../src/store'),
       utils: path.resolve(__dirname, '../../src/utils'),
+      hocs: path.resolve(__dirname, '../../src/hocs'),
+      layouts: path.resolve(__dirname, '../../src/layouts'),
     },
   };
 }

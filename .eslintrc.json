@@ -22,6 +22,10 @@
   },
   "plugins": [
     "eslint-plugin-import-helpers",
+    "jsx-a11y",
+    "prettier",
+    "react",
+    "react-hooks",
     "sonarjs"
   ],
   "settings": {
@@ -30,6 +34,7 @@
     }
   },
   "rules": {
+    "prettier/prettier": "error",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/dot-notation": "off",
     "@typescript-eslint/no-empty-interface": ["error", {
@@ -57,7 +62,7 @@
     }],
     "import/prefer-default-export": "off",
     "max-len": ["error", {
-      "code": 130
+      "code": 120
     }],
     "no-multiple-empty-lines": ["error", {
       "max": 1
@@ -68,9 +73,6 @@
     "react-hooks/exhaustive-deps": "off",
     "react/destructuring-assignment": ["warn", "always", {
       "ignoreClassFields": true
-    }],
-    "react/jsx-max-props-per-line": ["error", {
-      "maximum": 3
     }],
     "react/jsx-props-no-spreading": ["error", {
       "custom": "ignore"

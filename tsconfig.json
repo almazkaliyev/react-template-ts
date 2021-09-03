@@ -27,7 +27,10 @@
       "components/*": ["./src/components/*"],
       "pages/*": ["./src/pages/*"],
       "store/*": ["./src/store/*"],
+      "store": ["./src/store/index.ts"],
       "utils/*": ["./src/utils/*"],
+      "hocs/*": ["./src/hocs/*"],
+      "layouts/*": ["./src/layouts/*"],
     }
   },
   "exclude": [
