@@ -1,1 +1,3 @@
-export const MainPage: React.FC = () => <div>Main Page</div>;
+const MainPage: React.FC = () => <div>Main Page</div>;
+
+export default MainPage;

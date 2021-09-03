@@ -4,7 +4,7 @@
  * @return {Loader}
  * @see https://www.npmjs.com/package/css-loader
  */
-function getCssLoader() {
+ function getCssLoader() {
   return ['css-loader', 'sass-loader'];
 }
 

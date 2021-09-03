@@ -8,6 +8,4 @@ const initialState: UserState = {
   accessToken: null,
 };
 
-export const userReducer = createReducer(initialState, (builder) => {
-
-});
+export const userReducer = createReducer(initialState, (builder) => {});
