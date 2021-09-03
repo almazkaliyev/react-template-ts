@@ -1,6 +1,6 @@
 {
-  "name": "uca-frontend",
-  "version": "0.0.1a",
+  "name": "react-template-ts",
+  "version": "0.0.2",
   "description": "",
   "main": "./src/index.tsx",
   "scripts": {
