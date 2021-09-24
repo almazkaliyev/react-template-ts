@@ -1,0 +1,7 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "stylelint.packageManager": "yarn",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
+}

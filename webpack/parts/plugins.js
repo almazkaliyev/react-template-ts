@@ -4,7 +4,6 @@ const getDotenvPlugin = require('../plugins/dotenv-plugin');
 const getMiniCssExtractPlugin = require('../plugins/mini-css-extract-plugin');
 const getTsCheckerPlugin = require('../plugins/ts-checker-plugin');
 const getContextReplacementPlugin = require('../plugins/context-replacement-plugin');
-const getHotModuleReplacementPlugin = require('../plugins/hot-module-replacement-plugin');
 
 /**
  @description Returns a list of all connected plugins
@@ -19,7 +18,6 @@ function getBasePlugins(analyzeMode) {
   plugins.push(getMiniCssExtractPlugin());
   plugins.push(getTsCheckerPlugin());
   plugins.push(getContextReplacementPlugin());
-  plugins.push(getHotModuleReplacementPlugin());
   if (analyzeMode) plugins.push(getBundleAnalyzerPlugin());
 
   return plugins;

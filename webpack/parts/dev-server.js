@@ -3,16 +3,18 @@
  * @memberOf module:Parts
  * @return {Part}
  */
-function getDevServer() {
+ function getDevServer() {
   return {
     historyApiFallback: true,
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 9000,
     hot: true,
     open: true,
-    overlay: {
-      warnings: false,
-      errors: true,
+    client: {
+      overlay: {
+        warnings: false,
+        errors: true,
+      },
     },
   };
 }

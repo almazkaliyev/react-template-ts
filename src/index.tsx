@@ -11,5 +11,3 @@ import { App } from './App';
 const AppWithSetup = setup(App);
 
 render(<AppWithSetup />, document.getElementById('app'));
-
-module?.hot?.accept();

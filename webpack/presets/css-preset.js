@@ -2,6 +2,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const getCssLoader = require('../loaders/css-loader');
 
+const isProd = process.env.NODE_ENV === 'production';
+
 /**
  * Returns a flow for process scss, css input
  * @memberOf module:Presets
@@ -9,11 +11,11 @@ const getCssLoader = require('../loaders/css-loader');
  */
 function getCssPreset() {
   const loaders = [];
-  loaders.push(MiniCssExtractPlugin.loader);
-  loaders.push(...getCssLoader());
+  loaders.push(isProd ? MiniCssExtractPlugin.loader : 'style-loader');
+  loaders.push(...getCssLoader(isProd));
 
   return {
-    test: /\.(scss|css)$/,
+    test: /\.scss$/,
     use: loaders,
   };
 }

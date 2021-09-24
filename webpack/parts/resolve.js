@@ -10,13 +10,18 @@ function getResolve() {
   return {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
+      api: path.resolve(__dirname, '../../src/api'),
       assets: path.resolve(__dirname, '../../src/assets'),
       components: path.resolve(__dirname, '../../src/components'),
+      config: path.resolve(__dirname, '../../src/config'),
+      constants: path.resolve(__dirname, '../../src/constants'),
+      hocs: path.resolve(__dirname, '../../src/hocs'),
+      interfaces: path.resolve(__dirname, '../../src/interfaces'),
+      layouts: path.resolve(__dirname, '../../src/layouts'),
       pages: path.resolve(__dirname, '../../src/pages'),
+      routes: path.resolve(__dirname, '../../src/routes'),
       store: path.resolve(__dirname, '../../src/store'),
       utils: path.resolve(__dirname, '../../src/utils'),
-      hocs: path.resolve(__dirname, '../../src/hocs'),
-      layouts: path.resolve(__dirname, '../../src/layouts'),
     },
   };
 }

@@ -23,18 +23,27 @@
     "strict": true,
     "target": "es5",
     "paths": {
+      "api/*": ["./src/api/*"],
+      "api": ["./src/api/index.ts"],
       "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"],
+      "config/*": ["./src/config/*"],
+      "config": ["./src/config/index.ts"],
+      "constants/*": ["./src/constants/*"],
+      "hocs/*": ["./src/hocs/*"],
+      "interfaces/*": ["./src/interfaces/*"],
+      "layouts/*": ["./src/layouts/*"],
       "pages/*": ["./src/pages/*"],
+      "routes/*": ["./src/routes/*"],
+      "routes": ["./src/routes/index.tsx"],
       "store/*": ["./src/store/*"],
       "store": ["./src/store/index.ts"],
       "utils/*": ["./src/utils/*"],
-      "hocs/*": ["./src/hocs/*"],
-      "layouts/*": ["./src/layouts/*"],
     }
   },
   "exclude": [
-    "webpack/**/*"
+    "webpack/**/*",
+    "_templates/**/*"
   ],
   "include": [
     "src/**/*"

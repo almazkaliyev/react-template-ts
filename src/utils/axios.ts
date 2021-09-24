@@ -1,21 +1,24 @@
-import axios from 'axios';
-import { store } from 'store';
+import Axios, { AxiosRequestConfig } from 'axios';
+import { API_URL } from 'config';
+import storage from 'utils/storage';
 
-export const setAxiosAuthHeader = (token: string | null): void => {
+const authRequestInterceptor = (config: AxiosRequestConfig) => {
+  const token = storage.getToken();
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  config.headers.Accept = 'application/json';
+  return config;
+};
+
+export const axios = Axios.create({
+  baseURL: API_URL,
+});
+
+export const setAxiosAuthorizationToken = (token: null | string): void => {
   if (token) {
     axios.defaults.headers.Authorization = `Bearer ${token}`;
   }
 };
 
-axios.defaults.baseURL = process.env.API_URL;
-
-axios.interceptors.request.use((config) => {
-  const state = store.getState();
-  const token = state.user.accessToken;
-
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-
-  return config;
-});
+axios.interceptors.request.use(authRequestInterceptor);

@@ -4,7 +4,7 @@
  * @return {Loader}
  * @see https://www.npmjs.com/package/@svgr/webpack
  */
-function getSVGRLoader() {
+ function getSVGRLoader() {
   return {
     loader: '@svgr/webpack',
     options: {},
